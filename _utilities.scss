@@ -1,0 +1,163 @@
+@import "./variables";
+@import "./mixin";
+
+$utilities: (
+  "justify-content": (
+    "prefix": "justify",
+    "values": (
+      "between": $justify-content-between,
+      "around": $justify-content-around,
+      "evenly": $justify-content-evenly,
+      "center": $justify-center,
+      "start": $justify-start,
+      "end": $justify-end,
+    ),
+  ),
+  "align-items": (
+    "prefix": "align",
+    "values": (
+      "center": $align-items-center,
+      "start": $align-items-start,
+      "end": $align-items-end,
+      "stretch": $align-items-stretch,
+    ),
+  ),
+  "position": (
+    "prefix": "position",
+    "values": (
+      "relative": $position-relative,
+      "absolute": $position-absolute,
+      "fixed": $position-fixed,
+      "sticky": $position-sticky,
+    ),
+  ),
+);
+
+/* @each general */
+@each $property, $key in $utilities {
+  $prefix: map-get($key, "prefix");
+  $values: map-get($key, "values");
+
+  @each $value, $key in $values {
+    .#{$prefix}-#{$value} {
+      #{$property}: #{$key};
+    }
+  }
+}
+
+/* font size */
+@each $property, $type in $size {
+  .#{$property} {
+    font-size: $type;
+
+    @include sm {
+      font-size: calc(1.875rem + #{$type});
+    }
+
+    @include md {
+      font-size: calc(2.5rem + #{$type});
+    }
+
+    @include lg {
+      font-size: calc(3rem + #{$type});
+    }
+  }
+}
+
+/* padding */
+@each $property, $type in $padding {
+  .#{$property} {
+    padding: $type;
+  }
+}
+
+/* padding y */
+@each $property, $type in $paddingY {
+  .#{$property} {
+    padding: $type 0;
+  }
+}
+
+/* padding x */
+@each $property, $type in $paddingX {
+  .#{$property} {
+    padding: 0 $type;
+  }
+}
+
+/* padding t */
+@each $property, $type in $paddingT {
+  .#{$property} {
+    padding-top: $type;
+  }
+}
+
+/* padding l */
+@each $property, $type in $paddingL {
+  .#{$property} {
+    padding-left: $type;
+  }
+}
+
+/* padding r */
+@each $property, $type in $paddingR {
+  .#{$property} {
+    padding-right: $type;
+  }
+}
+
+/* padding b */
+@each $property, $type in $paddingB {
+  .#{$property} {
+    padding-bottom: $type;
+  }
+}
+
+/* margin */
+@each $property, $type in $margin {
+  .#{$property} {
+    margin: $type;
+  }
+}
+
+/* padding y */
+@each $property, $type in $marginY {
+  .#{$property} {
+    margin: $type 0;
+  }
+}
+
+/* padding x */
+@each $property, $type in $marginX {
+  .#{$property} {
+    margin: 0 $type;
+  }
+}
+
+/* margin t */
+@each $property, $type in $marginT {
+  .#{$property} {
+    margin-top: $type;
+  }
+}
+
+/* margin l */
+@each $property, $type in $marginL {
+  .#{$property} {
+    margin-left: $type;
+  }
+}
+
+/* margin r */
+@each $property, $type in $marginR {
+  .#{$property} {
+    margin-right: $type;
+  }
+}
+
+/* margin b x */
+@each $property, $type in $marginB {
+  .#{$property} {
+    margin-bottom: $type;
+  }
+} ;
