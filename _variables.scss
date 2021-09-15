@@ -159,6 +159,16 @@ $size: (
   "h6": $h6-font-size,
 );
 
+// map font size
+$display-font-sizes: (
+  "1": 5rem,
+  "2": 4.5rem,
+  "3": 4rem,
+  "4": 3.5rem,
+  "5": 3rem,
+  "6": 2.5rem,
+);
+
 /* position */
 $position-relative: "relative";
 $position-absolute: "absolute";
@@ -176,3 +186,8 @@ $breakpoints: (
   "lg": 992px,
   "xl": 1200px,
 );
+
+/* line-height */
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 2;

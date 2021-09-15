@@ -32,19 +32,21 @@
   }
 }
 
-@mixin row($gutter) {
+@mixin row() {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
-  margin-left: -$gutter;
-  margin-right: -$gutter;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 @mixin container {
   @each $breakpoints, $key in $breakpoints {
     @media (min-width: $key) {
       width: $key;
+      margin-left: -15px;
+      margin-right: -15px;
     }
   }
 }

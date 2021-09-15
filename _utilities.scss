@@ -47,20 +47,15 @@ $utilities: (
 
 /* font size */
 @each $property, $type in $size {
+  .dispaly-#{$property} {
+    font-size: $type;
+  }
+}
+
+/*  dispaly */
+@each $property, $type in $display-font-sizes {
   .#{$property} {
     font-size: $type;
-
-    @include sm {
-      font-size: calc(1.875rem + #{$type});
-    }
-
-    @include md {
-      font-size: calc(2.5rem + #{$type});
-    }
-
-    @include lg {
-      font-size: calc(3rem + #{$type});
-    }
   }
 }
 
