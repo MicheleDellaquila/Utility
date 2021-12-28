@@ -1,0 +1,17 @@
+.Modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  max-width: 420px;
+  background: #fffffe;
+  border-radius: 6px;
+  opacity: 1;
+
+  @media (max-width: 576px) {
+    .Modal {
+      margin: 0 0.5rem;
+    }
+  }
+}

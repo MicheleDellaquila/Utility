@@ -1,0 +1,26 @@
+@import '../Variables/variables';
+
+.btn {
+  background-color: #066ac9;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 0.6125rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:active {
+    color: #ffffff;
+    background-color: $active__btn;
+    border-color: $active__btn;
+  }
+}
