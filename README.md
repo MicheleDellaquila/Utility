@@ -1,4 +1,4 @@
-# Utility stylesheet sass
+# Utility stylesheet scss
 
 
 
