@@ -1,125 +1,30 @@
-@import './border';
-@import './color';
-@import './opacity';
-@import './padding';
-@import './margin';
+/* column */
+$columns: 12;
 
-/* symbol */
-$percentage: '%';
-
-/* breakpoints */
+/* breakpoins */
 $breakpoints: (
+  'xs': 280px,
+  'sm': 96%,
+  'md': 94%,
+  'lg': 94%,
+  'xl': 1140px,
+  'xxl': 1300px,
+) !default;
+
+/* breakpoints col */
+$breakpoints__col: (
+  'xs': 280px,
   'sm': 576px,
   'md': 768px,
   'lg': 992px,
   'xl': 1200px,
+  'xxl': 1400px,
 ) !default;
 
-/* columns */
-$columns: 12;
-
-/* container */
-$container--fluid: 100%;
-
-/* opacity */
-$opacity: (
-  '25': 0.25,
-  '50': 0.5,
-  '75': 0.75,
-  '100': 1,
-);
-
-/* border */
-$border-style: (
-  'border-solid': solid,
-  'border-dotted': dashed,
-  'border-dashed': dashed,
-  'border-double': double,
-  'border-none': none,
-);
-
-/* dispaly */
-$display: (
-  'block': block,
-  'inline-block': inline-block,
-  'inline': inline,
-  'flex': flex,
-  'inline-flex': inline-flex,
-  'grid': grid,
-  'hidden': none,
-);
-
-/* position */
-$position: (
-  'static': 'static',
-  'fixed': 'fixed',
-  'absolute': 'absolute',
-  'relative': 'relative',
-  'sticky': 'sticky',
-);
-
-/* justify content */
-$justify: (
-  'justify-center': 'center',
-  'justify-start': 'start',
-  'justify-end': 'end',
-  'justify-around': 'around',
-  'justify-evenly': 'evenly',
-);
-
-/* align items */
-$items: (
-  'items-center': 'center',
-  'items-start': 'start',
-  'items-end': 'end',
-);
-
-/* font size */
-$font-size: (
-  'font-xs': (
-    'prefix': 'xs',
-    'values': (
-      'base': 1rem,
-      'base-lg': 1.125rem,
-    ),
-  ),
-  'font-sm': (
-    'prefix': 'sm',
-    'values': (
-      'base': 1.5rem,
-      'base-lg': 1.75rem,
-    ),
-  ),
-  'font-md': (
-    'prefix': 'md',
-    'values': (
-      'base': 2rem,
-      'base-lg': 2.25rem,
-    ),
-  ),
-  'font-lg': (
-    'prefix': 'lg',
-    'values': (
-      'base': 2.625rem,
-      'base-lg': 2.875rem,
-    ),
-  ),
-  'font-xl': (
-    'prefix': 'xl',
-    'values': (
-      'base': 3.25rem,
-    ),
-  ),
-);
-
-/* text align */
-$text-align: (
-  'text-left': left,
-  'text-right': right,
-  'text-center': center,
-);
-
 /* color */
-$primary__color: #066ac9;
-$secondary__color: #0555a2;
-$active__btn: #0555a1;
+$primary__color: '';
+$secondary__color: '';
+
+/* color title and text */
+$color-title: #1e2022;
+$color-text: #677788;

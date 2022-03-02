@@ -1,4 +1,4 @@
-# Utility stylesheet scss
+# Utility stylesheet scss class
 
 
 

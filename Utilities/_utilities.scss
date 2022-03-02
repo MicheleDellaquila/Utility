@@ -1,476 +1,78 @@
-@import '../Variables/variables';
-
-/* create a class with h-[valuepx] */
-@for $i from 1 through 2000 {
-  [class~='h-[#{$i}px]'] {
-    height: #{$i}px;
-  }
-}
-
-/* create a class with h-[value%] */
-@for $i from 1 through 2000 {
-  [class~='h-[#{$i}%]'] {
-    height: #{$i}#{$percentage};
-  }
-}
-
-/* create a class with w-[valuepx] */
-@for $i from 1 through 2000 {
-  [class~='w-[#{$i}px]'] {
-    width: #{$i}px;
-  }
-}
-
-/* create a class with w-[value%] */
-@for $i from 1 through 2000 {
-  [class~='w-[#{$i}%]'] {
-    width: #{$i}#{$percentage};
-  }
-}
-
-/* create a class with max-x-[valuepx] */
-@for $i from 1 through 2000 {
-  [class~='max-w-[#{$i}px]'] {
-    max-width: #{$i}px;
-  }
-}
-
-/* create a class with max-w-[value%] */
-@for $i from 1 through 2000 {
-  [class~='max-w-[#{$i}%]'] {
-    max-width: #{$i}#{$percentage};
-  }
-}
-
-/* create a class with max-h-[value%] */
-@for $i from 1 through 2000 {
-  [class~='max-h-[#{$i}%]'] {
-    max-height: #{$i}#{$percentage};
-  }
-}
-
-/* create a class with max-h-[value%] */
-@for $i from 1 through 2000 {
-  [class~='max-h-[#{$i}%]'] {
-    max-height: #{$i}#{$percentage};
-  }
-}
-
-/* create a class with min-w-[valuepx] */
-@for $i from 1 through 2000 {
-  [class~='min-w-[#{$i}px]'] {
-    min-width: #{$i}px;
-  }
-}
-
-/* create a class with min-w-[value%] */
-@for $i from 1 through 2000 {
-  [class~='min-w-[#{$i}%]'] {
-    min-width: #{$i}#{$percentage};
-  }
-}
-
-/* create a class with max-h-[value%] */
-@for $i from 1 through 2000 {
-  [class~='min-h-[#{$i}%]'] {
-    min-height: #{$i}#{$percentage};
-  }
-}
-
-/* create a class with max-h-[value%] */
-@for $i from 1 through 2000 {
-  [class~='min-h-[#{$i}%]'] {
-    min-height: #{$i}#{$percentage};
-  }
-}
-
-/* create border width */
-@each $property, $value in $border-width {
-  .#{$property} {
-    border-width: #{$value};
-  }
-}
-
-/* create border x width */
-@each $property, $value in $border-x-width {
-  .#{$property} {
-    border-left-width: #{$value};
-    border-right-width: #{$value};
-  }
-}
-
-/* create border y width */
-@each $property, $value in $border-y-width {
-  .#{$property} {
-    border-top-width: #{$value};
-    border-bottom-width: #{$value};
-  }
-}
-
-/* create border t width */
-@each $property, $value in $border-t-width {
-  .#{$property} {
-    border-top-width: #{$value};
-  }
-}
-
-/* create border r width */
-@each $property, $value in $border-r-width {
-  .#{$property} {
-    border-right-width: #{$value};
-  }
-}
-
-/* create border b width */
-@each $property, $value in $border-b-width {
-  .#{$property} {
-    border-bottom-width: #{$value};
-  }
-}
-
-/* create border l width */
-@each $property, $value in $border-l-width {
-  .#{$property} {
-    border-left-width: #{$value};
-  }
-}
-
-/* dynamic border */
-@each $property, $value in $border-style {
-  $border: map-get($border-style, $property);
-
-  .#{$property} {
-    border-style: #{$border};
-  }
-}
-
-/* create border color */
-@each $property, $value in $border-color {
-  .#{$property} {
-    border-color: #{$value};
-  }
-}
-
-/* create border color x */
-@each $property, $value in $border-x-color {
-  .#{$property} {
-    border-left-color: #{$value};
-    border-right-color: #{$value};
-  }
-}
-
-/* create border color y */
-@each $property, $value in $border-y-color {
-  .#{$property} {
-    border-top-color: #{$value};
-    border-bottom-color: #{$value};
-  }
-}
-
-/* create border color t */
-@each $property, $value in $border-t-color {
-  .#{$property} {
-    border-top-color: #{$value};
-  }
-}
-
-/* create border color r */
-@each $property, $value in $border-r-color {
-  .#{$property} {
-    border-right-color: #{$value};
-  }
-}
-
-/* create border color b */
-@each $property, $value in $border-b-color {
-  .#{$property} {
-    border-bottom-color: #{$value};
-  }
-}
-
-/* create border color l */
-@each $property, $value in $border-l-color {
-  .#{$property} {
-    border-left-color: #{$value};
-  }
-}
-
-/* opacity scale 0.25 */
-@each $property1, $value1 in $border-color {
-  @each $property, $value in $opacity {
-    $opacityValue: map-get($opacity, $property);
-
-    [class*='#{$property1}/#{$property}'] {
-      border-color: #{$value1};
-      opacity: #{$opacityValue};
-    }
-  }
-}
-
-/* opacity scale 0.25 x */
-@each $property1, $value1 in $border-x-color {
-  @each $property, $value in $opacity {
-    $opacityValue: map-get($opacity, $property);
-
-    [class*='#{$property1}/#{$property}'] {
-      border-left-color: #{$value1};
-      border-right-color: #{$value1};
-      opacity: #{$opacityValue};
-    }
-  }
-}
-
-/* opacity scale 0.25 y */
-@each $property1, $value1 in $border-y-color {
-  @each $property, $value in $opacity {
-    $opacityValue: map-get($opacity, $property);
-
-    [class*='#{$property1}/#{$property}'] {
-      border-top-color: #{$value1};
-      border-bottom-color: #{$value1};
-      opacity: #{$opacityValue};
-    }
-  }
-}
-
-/* opacity scale 0.25 t */
-@each $property1, $value1 in $border-t-color {
-  @each $property, $value in $opacity {
-    $opacityValue: map-get($opacity, $property);
-
-    [class*='#{$property1}/#{$property}'] {
-      border-top-color: #{$value1};
-      opacity: #{$opacityValue};
-    }
-  }
-}
-
-/* opacity scale 0.25 r */
-@each $property1, $value1 in $border-r-color {
-  @each $property, $value in $opacity {
-    $opacityValue: map-get($opacity, $property);
-
-    [class*='#{$property1}/#{$property}'] {
-      border-right-color: #{$value1};
-      opacity: #{$opacityValue};
-    }
-  }
-}
-
-/* opacity scale 0.25 b */
-@each $property1, $value1 in $border-b-color {
-  @each $property, $value in $opacity {
-    $opacityValue: map-get($opacity, $property);
-
-    [class*='#{$property1}/#{$property}'] {
-      border-bottom-color: #{$value1};
-      opacity: #{$opacityValue};
-    }
-  }
-}
-
-/* opacity scale 0.25 l */
-@each $property1, $value1 in $border-l-color {
-  @each $property, $value in $opacity {
-    $opacityValue: map-get($opacity, $property);
-
-    [class*='#{$property1}/#{$property}'] {
-      border-left-color: #{$value1};
-      opacity: #{$opacityValue};
-    }
-  }
-}
-
-/* dynamic opacity */
-@each $property1, $value1 in $border-color {
-  @each $property, $value in $opacity__allValue {
-    [class*='#{$property1}/[#{$property}]'] {
-      border-color: #{$value1};
-      opacity: #{$property};
-    }
-  }
-}
+@import './variables';
 
 /* container */
-@each $breakpoints, $key in $breakpoints {
-  .container {
-    @media (min-width: $key) {
-      width: $key;
-      margin-left: -15px;
-      margin-right: -15px;
+@each $property, $key in $breakpoints {
+  @if ($property == 'xs') {
+    .container {
+      @media (min-width: 280px) {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
     }
-  }
-}
-
-/* dispaly */
-@each $property, $key in $display {
-  .#{$property} {
-    display: #{$property};
-  }
-}
-
-/* position */
-@each $property, $key in $position {
-  .#{$property} {
-    position: #{$property};
-  }
-}
-
-/* justify content */
-@each $property, $key in $justify {
-  .#{$property} {
-    justify-content: #{$key};
-  }
-}
-
-/* items */
-@each $property, $key in $items {
-  .#{$property} {
-    align-items: #{$key};
-  }
-}
-
-/* font size */
-@each $property, $key in $font-size {
-  $prefix: map-get($key, 'prefix');
-  $values: map-get($key, 'values');
-
-  @each $value, $key in $values {
-    .font-#{$prefix}-#{$value} {
-      font-size: #{$key};
+  } @else if ($property == 'sm') {
+    .container {
+      @media (min-width: 576px) {
+        max-width: 96%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
     }
-  }
-}
-
-/* create a class with font-[valuepx] */
-@for $i from 1 through 100 {
-  [class~='font-[#{$i}px]'] {
-    font-size: #{$i}px;
-  }
-}
-
-/* create a class with font-[valuerem] */
-@for $i from 1 through 20 {
-  [class~='font-[#{$i}rem]'] {
-    font-size: #{$i}rem;
-  }
-}
-
-/* text align */
-@each $property, $key in $text-align {
-  .#{$property} {
-    text-align: #{$key};
-  }
-}
-
-/* create padding */
-@each $property, $value in $padding {
-  .#{$property} {
-    padding: #{$value};
-  }
-}
-
-/* create padding x */
-@each $property, $value in $paddingX {
-  .#{$property} {
-    padding-left: #{$value};
-    padding-right: #{$value};
-  }
-}
-
-/* create padding y */
-@each $property, $value in $paddingY {
-  .#{$property} {
-    padding-top: #{$value};
-    padding-bottom: #{$value};
-  }
-}
-
-/* create padding t */
-@each $property, $value in $paddingT {
-  .#{$property} {
-    padding-top: #{$value};
-  }
-}
-
-/* create padding r */
-@each $property, $value in $paddingR {
-  .#{$property} {
-    padding-right: #{$value};
-  }
-}
-
-/* create padding b */
-@each $property, $value in $paddingB {
-  .#{$property} {
-    padding-bottom: #{$value};
-  }
-}
-
-/* create padding l */
-@each $property, $value in $paddingL {
-  .#{$property} {
-    padding-left: #{$value};
-  }
-}
-
-/* create margin */
-@each $property, $value in $margin {
-  .#{$property} {
-    margin: #{$value};
-  }
-}
-
-/* create margin x */
-@each $property, $value in $marginX {
-  .#{$property} {
-    margin-left: #{$value};
-    margin-right: #{$value};
-  }
-}
-
-/* create margin y */
-@each $property, $value in $marginY {
-  .#{$property} {
-    margin-top: #{$value};
-    margin-bottom: #{$value};
-  }
-}
-
-/* create margin t */
-@each $property, $value in $marginT {
-  .#{$property} {
-    margin-top: #{$value};
-  }
-}
-
-/* create margin r */
-@each $property, $value in $marginR {
-  .#{$property} {
-    margin-right: #{$value};
-  }
-}
-
-/* create margin b */
-@each $property, $value in $marginB {
-  .#{$property} {
-    margin-bottom: #{$value};
-  }
-}
-
-/* create margin l */
-@each $property, $value in $marginL {
-  .#{$property} {
-    margin-left: #{$value};
+  } @else if ($property == 'md') {
+    .container {
+      @media (min-width: 768px) {
+        max-width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+    }
+  } @else if ($property == 'lg') {
+    .container {
+      @media (min-width: 992px) {
+        max-width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+    }
+  } @else if($property == 'xl') {
+    .container {
+      @media (min-width: 1200px) {
+        max-width: 1140px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+    }
+  } @else {
+    .container {
+      @media (min-width: 1400px) {
+        max-width: 1300px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+    }
   }
 }
 
 /* create column */
-@each $property, $key in $breakpoints {
+@each $property, $key in $breakpoints__col {
   @for $i from 1 through $columns {
     @media (min-width: $key) {
       .col-#{$property}-#{$i} {
-        width: (100% / $columns) * $i;
+        flex-basis: (100% / $columns) * $i;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
       }
     }
   }
