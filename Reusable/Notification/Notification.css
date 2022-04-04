@@ -1,0 +1,57 @@
+.Notification {
+  width: 100%;
+  max-width: 360px;
+  bottom: 20px;
+  border-radius: 6px;
+  z-index: 99999;
+  left: 20px;
+  transition: all 700ms cubic-bezier(0.37, 0, 0.63, 1);
+}
+
+@media (max-width: 576px) {
+  .Notification {
+    max-width: 100%;
+    left: 0 !important;
+    bottom: 0 !important;
+    border-radius: 0;
+  }
+}
+
+.Notification-Success {
+  background-color: #49ab5f;
+}
+
+.Notification-Error {
+  background-color: #d32f2f;
+}
+
+.Notification-Info {
+  background-color: #1565c0;
+}
+
+.Notification__icon {
+  width: 35px;
+  height: 35px;
+}
+
+.Notification__title {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+/* animation */
+.notification--entering {
+  left: -100%;
+}
+
+.notification--entered {
+  left: 20px;
+}
+
+.notification--exiting {
+  left: -100%;
+}
+
+.notification--exited {
+  left: -100%;
+}

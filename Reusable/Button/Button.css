@@ -1,46 +1,40 @@
-@import '../Variables/variables';
-
+/* variant btn */
 .btn-primary {
-  background-color: $primary__color;
+  background-color: var(--color-primary);
   color: #ffffff;
+}
 
-  &:hover,
-  &:active {
-    background-color: $secondary__color;
-  }
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: var(--color-secondary);
+}
 
-  &:disabled {
-    opacity: 0.5;
-    background-color: $primary__color;
-    cursor: not-allowed;
-  }
+.btn-primary:disabled {
+  opacity: 0.5;
+  background-color: var(--color-primary);
+  cursor: not-allowed;
 }
 
 .btn-secondary {
-  background-color: $secondary__color;
+  background-color: #49ab5f;
   color: #ffffff;
+}
 
-  &:hover,
-  &:active {
-    background-color: $primary__color;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    background-color: $secondary__color;
-    cursor: not-allowed;
-  }
+.btn-secondary:disabled {
+  opacity: 0.5;
+  background-color: var(--color-secondary);
+  cursor: not-allowed;
 }
 
 .btn-outline {
-  border: 1px solid $primary__color;
-  color: $primary__color;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
 
-  &:hover,
-  &:active {
-    background-color: $primary__color;
-    color: #ffffff;
-  }
+.btn-outline:hover,
+.btn-outline:active {
+  background-color: var(--color-primary);
+  color: #ffffff;
 }
 
 /* size btn */
