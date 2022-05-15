@@ -1,19 +1,15 @@
-/* column */
+/* variable */
+:root {
+  --color-bg: '';
+  --color-title-fontFamily: '';
+  --color-text-fontFamily: '';
+  --gutter-y: 0;
+}
+
+/* grid system */
 $columns: 12;
-
-/* breakpoins */
 $breakpoints: (
-  'xs': 280px,
-  'sm': 96%,
-  'md': 94%,
-  'lg': 94%,
-  'xl': 1140px,
-  'xxl': 1300px,
-) !default;
-
-/* breakpoints col */
-$breakpoints__col: (
-  'xs': 280px,
+  'xs': 320px,
   'sm': 576px,
   'md': 768px,
   'lg': 992px,

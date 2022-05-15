@@ -1,0 +1,21 @@
+.Field {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.Field__label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-title);
+}
+
+.Field__error {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #f44336;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
