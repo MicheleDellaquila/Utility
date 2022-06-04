@@ -1,6 +1,10 @@
 @import './variables';
 
 /* container */
+.container-fluid {
+  width: 100%;
+}
+
 .container {
   max-width: var(--width-container);
   margin-left: auto;
