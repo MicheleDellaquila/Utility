@@ -2,8 +2,10 @@
 
 /* container */
 .container {
-  max-width: 1548px;
-  margin: 0 auto;
+  max-width: var(--width-container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
 }
 
 /* row */
@@ -21,9 +23,10 @@
   @for $i from 1 through $columns {
     @media (min-width: $key) {
       .col-#{$property}-#{$i} {
-        flex-basis: (100% / $columns) * $i;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
+        flex: 0 0 auto;
+        width: (100% / $columns) * $i;
+        padding-left: 15px;
+        padding-right: 15px;
       }
     }
   }

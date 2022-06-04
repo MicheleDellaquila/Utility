@@ -4,12 +4,14 @@
   --color-title-fontFamily: '';
   --color-text-fontFamily: '';
   --gutter-y: 0;
+  --gutter-x: 0;
+  --width-container: 1584px;
 }
 
 /* grid system */
 $columns: 12;
 $breakpoints: (
-  'xs': 320px,
+  "xs": 0,
   'sm': 576px,
   'md': 768px,
   'lg': 992px,
