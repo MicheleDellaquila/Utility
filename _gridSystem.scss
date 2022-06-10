@@ -9,16 +9,13 @@
   max-width: var(--width-container);
   margin-left: auto;
   margin-right: auto;
-  padding-left: var(--padding-container, 15);
-  padding-right: var(--padding-container, 15);
+  padding: 0;
 }
 
 /* row */
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: - var(--padding-container);
-  margin-right: - var(--padding-container);
 
   & > * {
     margin-top: var(--gutter-y);
