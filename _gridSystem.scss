@@ -1,4 +1,4 @@
-@import './variables';
+@import "./variables";
 
 /* container */
 .container-fluid {
@@ -9,28 +9,27 @@
   max-width: var(--width-container);
   margin-left: auto;
   margin-right: auto;
-  padding: 0;
+  padding-left: var(--padding-container);
+  padding-right: var(--padding-container);
 }
 
 /* row */
 .row {
   display: flex;
   flex-wrap: wrap;
-
-  & > * {
-    margin-top: var(--gutter-y);
-  }
+  margin-left: calc(-1 * var(--padding-container));
+  margin-right: calc(-1 * var(--padding-container));
 }
 
 /* column creation */
-@each $property, $key in $breakpoints__col {
+@each $property, $key in $breakpoints {
   @for $i from 1 through $columns {
     @media (min-width: $key) {
       .col-#{$property}-#{$i} {
         flex: 0 0 auto;
         width: (100% / $columns) * $i;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: var(--padding-container);
+        padding-right: var(--padding-container);
       }
     }
   }
